@@ -1,0 +1,63 @@
+<script>
+//Kérj be egy számot és határozd meg, hogy melyik életszakaszba tartozik!
+/* 
+< 0.12 - Csecsemőkor
+1-2 - Kisgyermekkor
+3-6 - Óvodáskor
+7-11 - Kisiskoláskor
+12-17 - Serdülőkor
+18-23 - Ifjúkor
+24-34  - Fiatal felnőttkor
+35-59  - Felnőttkor
+60-79  - Időskor-öregkor
+80-110 - Aggkor
+*/
+
+let vizsgaltSzam=prompt("Add meg a vizsgálandó számot:");
+if(vizsgaltSzam<0.13){
+	document.write(`${vizsgaltSzam}  év esetén, Csecsemőkor`);
+}
+
+else if(vizsgaltSzam<2.9){
+	document.write(`${vizsgaltSzam} év esetén, Kisgyermekkor`);
+}
+else if(vizsgaltSzam<7){
+	document.write(`${vizsgaltSzam} év esetén, Óvodáskor`);
+}
+else if(vizsgaltSzam<12){
+	document.write(`${vizsgaltSzam} év esetén, Kisiskoláskor`);
+}
+else if(vizsgaltSzam<18){
+	document.write(`${vizsgaltSzam} év esetén, Serdülőkor`);
+}
+else if(vizsgaltSzam<24){
+	document.write(`${vizsgaltSzam} év esetén, Ifjúkor`);
+}
+else if(vizsgaltSzam<35){
+	document.write(`${vizsgaltSzam} év esetén, Fiatal felnőttkor`);
+}  
+else if(vizsgaltSzam<60){
+	document.write(`${vizsgaltSzam} év esetén, Felnőttkor`);
+}
+else if(vizsgaltSzam<80){
+	document.write(`${vizsgaltSzam} év esetén, Időskor-öregkor`);
+}
+else if(vizsgaltSzam<111){
+	document.write(`${vizsgaltSzam} év esetén, Aggkor`);
+}
+else{
+	document.write("Hibás adat!");
+}
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
