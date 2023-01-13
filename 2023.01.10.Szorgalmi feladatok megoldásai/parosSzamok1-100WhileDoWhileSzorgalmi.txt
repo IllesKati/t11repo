@@ -1,0 +1,21 @@
+<script>
+//Páros számok 1-100-ig
+for(let i=2;i<=100;i+=2)
+document.write(`${i},`);
+{
+document.write("<hr>");
+document.write("While ciklus:<br>");
+}
+let i=2;
+while(i<=100){
+	document.write(`${i},`);
+    i+=2;
+}
+document.write("<hr>");
+document.write("Do-While ciklus:<br>");
+let j=2;
+do{
+	document.write(`${j},`);
+    j+=2;
+}while(j<=100)
+</script>

@@ -1,0 +1,21 @@
+<script>
+//Számok visszafelé 50-től 0-ig
+for(let i=50;i>=0;i--) 
+document.write(`${i},`);
+{
+document.write("<hr>");
+document.write("While ciklus:<br>");
+}
+let i=50;
+while(i>=0){
+	document.write(`${i},`);
+    i--;
+}
+document.write("<hr>");
+document.write("Do-While ciklus:<br>");
+let j=50;
+do{
+	document.write(`${j},`);
+    j--;
+}while(j>=0)
+</script>
