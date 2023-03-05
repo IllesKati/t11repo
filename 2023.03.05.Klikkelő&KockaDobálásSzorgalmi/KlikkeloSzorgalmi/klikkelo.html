@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klikkelős játék</title>
+    <style>
+        #ugraloFelirat {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 5px;
+            padding: 65px;
+            text-align: center;
+            border-radius: 5px;
+            background-image: url(eger.jpg);
+            border: 1px solid rgb(170, 168, 168);
+            box-shadow: 2px 2px 2px black;
+        }
+
+        /*Számáló elem formázása*/
+        #szamlalo {
+            color: white;
+            position: fixed;
+            top: 0px;
+            left: 50%;
+            width: 50px;
+            transform: translate(-25px);
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.9);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ugraloFelirat"></div>
+    <!--Számláló létrehozás-->
+    <div id="szamlalo">0</div>
+    <script>
+
+        //Ha responsive-vá akarod tenni érdemes lekérdezni a képernyő méretét JS kóddal
+        ugraloFelirat.addEventListener("click", ugras);
+
+        function ugras() {
+
+            let randomTopErtek = Math.round(Math.random() * 1010) - 76;//kivonni belőle az elem paddingjét és a betűméretet
+            let randomLeftErtek = Math.round(Math.random() * 1900) - 100;//kivonni belőle az elem szélességét
+            let elem = document.querySelector("#ugraloFelirat");
+            elem.style.top = randomTopErtek + "px";
+            elem.style.left = randomLeftErtek + "px";
+            //Számláló módosítása:
+            let klikkSzam = Number(document.querySelector("#szamlalo").innerHTML) + 1;
+            document.querySelector("#szamlalo").innerHTML = klikkSzam;
+
+        }
+    </script>
+</body>
+
+</html>
