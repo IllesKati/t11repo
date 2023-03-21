@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM feladatsor</title>
+</head>
+
+<body>
+
+    <input type="text" id="karakterszam"></input><br><br>
+
+
+    <label for="x">A oldal mérete:</label>
+    <input type="number" id="aOldal" class="form-control">
+
+    <label for="y">B oldal mérete:</label>
+    <input type="number" id="bOldal" class="form-control"><br>
+    <button id="kirajzolGomb" class="form-control btn btn-success mt-3">Kirajzol</button>
+    <div id="kirajzoltNegyzet"></div>
+    <br>
+
+
+    <button id="bujocska">Kattints ide!</button>
+    <img src="hidingCat.jpg">
+
+    <script>
+        function karakterSzam() {
+
+        }
+
+
+        kirajzolGomb.addEventListener("click", kirajzolGomb);
+        function kirajzoltNegyzet() {
+            let aSide = document.querySelector("#x").value;
+            let bSide = document.querySelector("#y").value;
+
+            if (meret(xSide) == true && meret(ySide) == true) {
+                let rajzolando = document.querySelector("#kirajzoltNegyzet");
+                rajzolando.style.width = xSide + "100px";
+                rajzolando.style.height = ySide + "100px";
+                rajzolando.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>
