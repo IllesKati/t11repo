@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery feladatsor</title>
+    <style>
+        #megjelenitendoElem {
+            background-color: rgb(29, 6, 242);
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--1.feladat-->
+    <button id="fadeToggleButton">Eltűnés/megjelenés - fadeToggle()</button>
+    <div id="megjelenitendoElem"></div><br><br>
+
+
+    <!--2.feladat-->
+    <input type="text" placeholder="Ide írd a szöveget" id="vizsgalandoSzoveg">
+    <p id="karakterSzam">(0 karakter)</p><br><br>
+
+
+    <!--3.feladat-->
+    <input type="text" placeholder="Ide írd a szöveget" id="textMezo">
+    <button type="button" id="modositoGomb">Rejtve/Megjelenítve</button><br><br>
+
+
+    <!--4.feladat-->
+    <input type="number" id="ertekKiolvas">
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+
+            $("#fadeToggleButton").click(function () {
+                $("#megjelenitendoElem").fadeToggle(3000);
+            });
+
+
+            i = 0;
+            $("#vizsgalandoSzoveg").keypress(function () {
+                $("#karakterSzam").text(i += 1);
+            });
+
+            $("#modositoGomb").click(function () {
+                $("#textMezo").attr("type", "password");
+            });
+
+            $("#ertekKiolvas").click(function () {
+                alert("A víz állapota:[" + $("#szamMezo").val() + "]");
+            });
+
+        });
+    </script>
+</body>
+
+</html>
