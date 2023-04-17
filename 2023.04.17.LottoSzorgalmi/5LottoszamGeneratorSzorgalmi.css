@@ -1,0 +1,42 @@
+body {
+    background: #cac8c8;
+    font: 16px/1 Helvetica, Arial, sans-serif;
+}
+
+table tr,
+td {
+    border: 1px solid blue;
+}
+
+table {
+
+    border-collapse: separate;
+}
+
+.jeloletlenCella {
+    background-color: rgb(148, 150, 150);
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: inherit;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+#lotto {
+    border: 2px solid black;
+    margin: 0px auto;
+}
+
+tbody {
+    vertical-align: middle;
+}
+
+th {
+    text-align: center;
+}
+
+td {
+    height: 30px;
+}
