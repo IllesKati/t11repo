@@ -1,0 +1,23 @@
+pilotaAdat = [
+    "Max Verstappen;454;15;8",
+    "Charles Leclerc;308;3;8",
+    "Sergio Perez;305;2;0",
+    "George Russell;275;1;2",
+    "Carlos Sainz Jr;246;1;3",
+    "Lewis Hamilton;240;0;0",
+    "Lando Norris;122;0;0",
+    "Esteban Ocon;92;0;0",
+    "Fernando Alonso;81;0;0",
+    "Valtteri Bottas;49;0;0",
+    "Daniel Ricciardo;37;0;0",
+    "Sebastian Vettel;37;0;0",
+    "Kevin Magnussen;25;0;0",
+    "Pierre Gasly;23;0;0",
+    "Lance Stroll;18;0;0",
+    "Mick Schumacher;12;0;1",
+    "Yuki Tsunoda;12;0;0",
+    "Guanyu Zhou;6;0;0",
+    "Alexander Albon;4;0;0",
+    "Nyck de Vries;2;0;0",
+    "Nicholas Latifi;2;0,0"
+];
