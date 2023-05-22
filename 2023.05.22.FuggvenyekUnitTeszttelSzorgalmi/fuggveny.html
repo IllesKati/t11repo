@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Függvényes unit tesztek</title>
+</head>
+
+<body>
+    <table id="testTable" class="table table-sm table-striped table-dark table-hover">
+        <thead>
+            <tr>
+                <td>Teszt neve</td>
+                <td>Input adat</td>
+                <td>Elvárt eredmény</td>
+                <td>Végeredmény</td>
+                <td>Sikeresség</td>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        //Ide illessze be a JavasScript kódot a teszteléshez
+
+        function NegyzetKerulet(aOldal) {
+            return Number((aOldal * 4));
+        }
+
+        function NegyzetTerulet(aOldal) {
+            return Number((aOldal * aOldal));
+        }
+
+
+        function TeglalapKerulet(aOldal, bOldal) {
+            return Number((Number(aOldal) + Number(bOldal)) * 2);
+        }
+
+        function TeglalapTerulet(aOldal, bOldal) {
+            return Number((aOldal * bOldal));
+        }
+
+
+        function Hatvanyozo(szam, hatvany) {
+            return Number(Math.pow(szam, hatvany));
+        }
+
+
+        function KockaFelszin(aOldal) {
+            return Number(6 * aOldal * aOldal);
+        }
+
+        function LegNagyobbKozosOszto(szamEgy, szamKetto) {
+            var lnko = 1;
+            for (var i = 2; i <= szamEgy; i++) {
+                if (szamEgy % i == 0 && szamKetto % i == 0)
+                    lnko = i;
+                return lnko;
+            }
+        }
+
+        function Nagybetus(szoveg) {
+            var nagyKezdobetusSzoveg = szoveg[0].toUpperCase();
+            for (var i = 1; i < szoveg.length; i++) {
+                nagyKezdobetusSzoveg += szoveg[i].toLowerCase();
+            }
+            return nagyKezdobetusSzoveg;
+        }
+
+        function Kisbetus(szoveg) {
+            var nagyKezdobetusSzoveg = szoveg[0].toLowerCase();
+            for (var i = 1; i < szoveg.length; i++) {
+                nagyKezdobetusSzoveg += szoveg[i].toLowerCase();
+            }
+            return nagyKezdobetusSzoveg;
+        }
+
+        function CsakAFele(szoveg) {
+            var ujSzoveg = "";
+            for (var i = 0; i < szoveg.length; i++) {
+                if (i % 2 == 0) {
+                    ujSzoveg += szoveg[i];
+                }
+            }
+            return ujSzoveg;
+        }
+
+        function MaganHangzokSzama(vizsgaltSzoveg) {
+            var db = 0;
+            var maganHangzok = ["a", "á", "e", "é", "i", "í", "o", "ó", "ö", "ő", "u", "ú", "ü", "ű", "A", "Á", "E", "É", "I", "Í", "O", "Ó", "Ö", "Ő", "U", "Ú", "Ü", "Ű"];
+            for (var i = 0; i < vizsgaltSzoveg.length; i++) {
+                for (var j = 0; j < maganHangzok.length; j++) {
+                    if (vizsgaltSzoveg[i] == maganHangzok[j]) {
+                        db++;
+                    }
+                }
+            }
+            return db;
+        }
+
+
+
+    </script>
+    <script src="fuggvenyteszt.js"></script>
+</body>
+
+</html>
